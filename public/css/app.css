@@ -1,0 +1,24 @@
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  -webkit-font-smoothing: antialiased;
+  color: #000;
+}
+
+nav li:last-child a {
+  background: rgb(0, 179, 179);
+  transition: 0.8s all;
+}
+nav li:last-child a:hover {
+  background: rgb(2, 68, 250);
+}
+
+nav li a {
+  transition: 0.8s all;
+}
+nav li a:hover {
+  color: rgb(0, 179, 179);
+}
+
+section.main {
+  background: aliceblue;
+}
