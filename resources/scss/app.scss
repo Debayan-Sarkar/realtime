@@ -23,3 +23,16 @@ nav li a {
 section.main{
     background: aliceblue;
 }
+.size{
+    background: aliceblue;
+}
+.addcart{
+    border: 2px solid $primary;
+    transition: $smooth;
+    color: $primary;
+    &:hover{
+        background: $primary;
+        border-color:$white;
+        color: $white;
+    }
+}

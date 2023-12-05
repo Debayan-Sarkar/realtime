@@ -22,3 +22,18 @@ nav li a:hover {
 section.main {
   background: aliceblue;
 }
+
+.size {
+  background: aliceblue;
+}
+
+.addcart {
+  border: 2px solid rgb(0, 179, 179);
+  transition: 0.8s all;
+  color: rgb(0, 179, 179);
+}
+.addcart:hover {
+  background: rgb(0, 179, 179);
+  border-color: #fff;
+  color: #fff;
+}
