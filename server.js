@@ -7,6 +7,7 @@ const elayouts = require('express-ejs-layouts');
 const PORT = process.env.PORT || 3300;
 const faviconPath = path.join(__dirname, 'public', 'favicon.ico');
 
+
 //Assets
 app.use(express.static('public'))
 

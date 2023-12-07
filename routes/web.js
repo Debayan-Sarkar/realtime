@@ -1,15 +1,25 @@
+const hc = require('../app/http/controllers/homeController');
+const ac = require('../app/http/controllers/authController');
+const cp = require('../app/http/controllers/users/cartController');
+const mysql = require('mysql');
+const con = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'S@nu1234',
+    database: 'prodrel_grow_up_store'
+});
+// con.connect();
+con.connect((err) => {
+    if (err) {
+      console.error('Error connecting to the database:', err.stack);
+      return;
+    }
+    console.log('Connected to the database as ID', con.threadId);
+  });
 const initroutes = (app) => {
-    app.get('/', (req, res) => {
-        res.render('home');
-    });
-    app.get('/login', (req, res) => {
-        res.render('auth/login');
-    });
-    app.get('/register', (req, res) => {
-        res.render('auth/register');
-    });
-    app.get('/cart', (req, res) => {
-        res.render('users/cart');
-    });
+    app.get('/', hc(con).index);
+    app.get('/login', ac(con).login);
+    app.get('/register', ac(con).register);
+    app.get('/cart',cp(con).cartp);
 }
 module.exports = initroutes;
