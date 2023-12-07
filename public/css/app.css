@@ -10,6 +10,16 @@ nav li:last-child a {
 }
 nav li:last-child a:hover {
   background: rgb(2, 68, 250);
+  color: #fff;
+}
+
+nav li:last-child a.selected {
+  background: rgb(2, 68, 250);
+  color: #fff;
+}
+
+nav li a.selected {
+  color: rgb(0, 179, 179);
 }
 
 nav li a {
@@ -36,4 +46,33 @@ section.main {
   background: rgb(0, 179, 179);
   border-color: #fff;
   color: #fff;
+}
+
+.btn-primary {
+  background: rgb(0, 179, 179);
+  transition: 0.8s all;
+}
+.btn-primary:hover {
+  background: rgb(2, 68, 250);
+}
+
+section.cart {
+  background: aliceblue;
+}
+section.cart .amount {
+  color: rgb(0, 179, 179);
+}
+
+section.login {
+  background: aliceblue;
+}
+
+section.register {
+  background: aliceblue;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: none;
+          appearance: none;
+  display: none;
 }
